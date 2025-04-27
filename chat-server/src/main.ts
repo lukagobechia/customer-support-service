@@ -11,9 +11,12 @@ async function bootstrap() {
   );
   
   app.enableCors({
-    origin: 'http://localhost:5173',
+  origin: [
+    'http://localhost:5173',
+    'https://customer-support-service-e40yd7mrk.vercel.app',
+    ],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', , 'PATCH', 'DELETE', 'OPTIONS'],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   });
   await app.listen(process.env.PORT ?? 3000);
