@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://customer-support-service-5lst.onrender.com";
 
 const ApiService = {
   login: async (email, password) => {
