@@ -10,13 +10,13 @@ import { v4 as uuid } from 'uuid';
 
 @Injectable()
 export class AwsS3Service {
-  private bucketName = process.env.AWS_BUCKET_NAME;
+  private bucketName = process.env.MY_AWS_BUCKET_NAME;
   private s3storage: S3Client;
 
   constructor() {
-    const accessKeyId = process.env.AWS_ACCESS_KEY;
-    const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY;
-    const region = process.env.AWS_REGION;
+    const accessKeyId = process.env.MY_AWS_ACCESS_KEY;
+    const secretAccessKey = process.env.MY_AWS_SECRET_ACCESS_KEY;
+    const region = process.env.MY_AWS_REGION;
 
     if (!this.bucketName || !accessKeyId || !secretAccessKey || !region) {
       throw new Error('AWS S3 credentials or bucket name are missing');
