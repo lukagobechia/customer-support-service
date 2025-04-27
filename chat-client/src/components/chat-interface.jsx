@@ -26,7 +26,7 @@ export default function ChatInterface({ ticket, userType, onTicketUpdated }) {
 
   // Initialize socket connection
   useEffect(() => {
-    const socketInstance = io("http://localhost:3000"); // Replace with your backend URL
+    const socketInstance = io("https://customer-support-service-5lst.onrender.com"); // Replace with your backend URL
     setSocket(socketInstance);
 
     return () => {
