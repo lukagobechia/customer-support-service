@@ -14,6 +14,7 @@ async function bootstrap() {
   origin: [
     'http://localhost:5173',
     'https://customer-support-service-e40yd7mrk.vercel.app',
+    'https://customer-support-service.vercel.app',
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
