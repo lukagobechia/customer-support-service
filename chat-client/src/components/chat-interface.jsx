@@ -26,7 +26,7 @@ export default function ChatInterface({ ticket, userType, onTicketUpdated }) {
 
   // Initialize socket connection
   useEffect(() => {
-    const socketInstance = io("https://customer-support-service-5lst.onrender.com"); // Replace with your backend URL
+    const socketInstance = io(import.meta.env.VITE_API_URL || 'http://localhost:3000'); // Replace with your backend URL
     setSocket(socketInstance);
 
     return () => {
@@ -298,7 +298,7 @@ export default function ChatInterface({ ticket, userType, onTicketUpdated }) {
     // Use AWS SDK or call your backend to upload the file
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("ticketId",ticket._id);
+    formData.append("ticketId", ticket._id);
     try {
       // Assuming you have an API endpoint for file upload
       const response = await ApiService.uploadFileToS3(formData);
@@ -391,7 +391,6 @@ export default function ChatInterface({ ticket, userType, onTicketUpdated }) {
       }));
     }
   };
-
 
   const openImageModal = (imageUrl) => {
     setModalImage(imageUrl);

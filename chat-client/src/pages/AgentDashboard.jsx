@@ -28,7 +28,7 @@ export default function AgentDashboard() {
 
   useEffect(() => {
     // Initialize socket connection
-    const socketInstance = io("https://customer-support-service-5lst.onrender.com"); // Replace with your backend URL
+    const socketInstance = io(import.meta.env.VITE_API_URL || 'http://localhost:3000'); // Replace with your backend URL
     setSocket(socketInstance);
 
     // Clean up on unmount
