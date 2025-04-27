@@ -1,0 +1,36 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+  color: white;
+}
+
+.badge-status-open {
+  background-color: var(--status-open);
+}
+
+.badge-status-in-progress {
+  background-color: var(--status-in-progress);
+}
+
+.badge-status-closed {
+  background-color: var(--status-closed);
+}
+
+.badge-priority-high {
+  background-color: var(--priority-high);
+}
+
+.badge-priority-medium {
+  background-color: var(--priority-medium);
+}
+
+.badge-priority-low {
+  background-color: var(--priority-low);
+}
+
